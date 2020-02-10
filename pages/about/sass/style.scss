@@ -1,0 +1,170 @@
+@charset 'utf-8';
+
+$font_family:'Microsoft yahei';
+
+#decoration.about {
+    width: 100%;
+    padding-top: 100px;
+
+    /***
+    * 头部
+    ***/
+    .header,.header-btsp {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 999;        
+        background-color: #fff;
+    }
+    
+    .header {
+        height: 100px;
+    }
+
+    .header-btsp {
+        display: none;
+        height: 52px;
+    }
+    .container{
+        width: 100%;
+
+        .container-c{
+            width: 1200px;
+            margin: 0 auto;
+
+
+            // 公用的title
+            .module-title{
+                height: 70px;
+                color: #767676;
+
+                .ctitle{
+                    font: 18px/1 $font_family;
+
+                }
+                .etitle{
+                    font: 12px/22px $font_family;
+                }
+                &::after{
+                    content:'';
+                    display: block;
+                    width: 30px;
+                    height: 1px;
+                    background-color: #767676;
+                }
+
+            }
+
+            .product-header {
+                overflow: hidden;
+                position: relative;
+                color: #767676;
+                width: 1200px;
+                height: 44px;
+                padding-top: 50px;
+
+                .product-posTips {
+                    font: 14px/1 $font_family;
+
+                    &>a {
+                        color: #668aca;
+                    }
+                }
+            }
+
+            .module.module-team{
+                margin-bottom: 70px;
+                .team-parters{
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    
+                    .team-parter{
+                        padding-bottom: 30px;
+
+                        .parter-img{
+                            width: 200px;
+                            height: 200px;
+                            border-radius: 6px;
+                            background-color: gray;
+                            overflow: hidden;
+                        }
+    
+                        .parter-info{
+                            width: 360px;
+                            height: 200px;
+                            box-sizing: border-box;
+                            padding-top: 30px;
+                            padding-left: 24px;
+                            color: #6b6b6b;
+                            .parter-name{
+                                font: lighter 18px/1 $font_family;
+                                margin-bottom: 9px;
+                            }
+                            .parter-post{
+                                font-size: 14px;
+                                line-height: 1em;
+                                margin-bottom: 20px;
+                            }
+                            .parter-desc{
+                                font-size: 12px;
+                                line-height: 22px;
+                                margin-bottom: 15px;
+                            }
+                            &::after{
+                                content: '';
+                                display:block;
+                                width: 60px;
+                                height: 1px;
+                                background-color: #e2e2e2;
+                            }
+                        }
+                    }
+                }
+            }
+
+            //简设使命
+
+            .module.module-mession{
+                .module-content{
+                    width: 620px;
+                    margin-bottom: 35px;
+                    color: #989898;
+                    .content-txt{
+                        font-size: 14px;
+                        line-height: 24px;
+                        margin-bottom: 10px;
+                        text-indent: 2em;
+                    }
+
+                }
+                .module-img{
+                    width: 500px;
+                    height: 300px;
+                    background-color: blue;
+                }
+
+            }
+
+            //简设理念
+            .module.module-vision{
+                .module-content{
+                    width: 620px;
+                    margin-bottom: 195px;
+                    color: #989898;
+                    .content-txt{
+                        font-size: 14px;
+                        line-height: 24px;
+                        text-indent: 2em;
+                    }
+
+                }
+            }
+
+
+        }
+    }
+
+
+}

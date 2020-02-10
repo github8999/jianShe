@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简设装饰-产品</title>
+   
+    <link rel="stylesheet" href="../../css/reset.css"> <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="css/style.css"> <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="css/style-btsp.css"> <!-- 引入响应式页面样式 -->
+    <link rel="stylesheet" href="../../css/header-bstp.css"> <!-- 引入响应式头部样式 -->
+    <link rel="stylesheet" href="../../lib/animate/animate.min.css">
+</head>
+
+<body>
+
+    <div id="decoration" class="product">
+
+        <!-- 引入头部 -->
+        <script src="../../js/header.js"></script>
+        <script src="../../js/header_btsp.js"></script>
+
+        <div class="banner">
+            <div class="banner-c wow fadeIn">
+                <a class="banner-hyper" href="#">
+                    <img src="imgs/banner-img.jpg" alt="" class="banner-img">
+                </a>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="container-c">
+                <!-- 产品中心: 床 -->
+                <div class="module module-bed">
+                    <div class="product-header">
+                        <div class="product-posTips">
+                            您的位置：产品 > <a href="#">产品中心</a>
+                        </div>
+                        <ul class="product-cates clearfix">
+                            <li class="product-cate fl"><a class="product-hyper" href="#">床</a></li>
+                            <li class="product-cate fl"><a class="product-hyper" href="#">沙发</a></li>
+                            <li class="product-cate fl"><a class="product-hyper" href="#">衣柜</a></li>
+                            <li class="product-cate fl"><a class="product-hyper" href="#">桌椅</a></li>
+                            <li class="product-cate fl"><a class="product-hyper" href="#">灯</a></li>
+                        </ul>
+                    </div>
+
+                    <ul class="cate-products">
+                        <li class="cate-product fl wow bounceInUp">
+                            <a class="cate-product-hyper" href="#">
+                                <p class="product-id">${val.id}</p>
+                                <div class="product-desc-hover">
+                                    <p class="name">${val.name}</p>
+                                    <div class="txt">${val.desc}</div>
+                                </div>
+                                <img class="product-img" src="../../imgs/1.png" alt="">
+                                <div class="product-cover"></div>
+                                <div class="product-desc">
+                                    <p class="name">${val.name}</p>
+                                    <div class="txt">${val.desc}</div>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <!-- 引入页脚 -->
+        <script src="../../js/footer.js"></script>
+    </div>
+    <!-- 引入jquery -->
+    <script src="../../lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../lib/WOW/wow.min.js"></script>
+    <!-- 引入数据js文件 -->
+    <script src="../../js/data.js"></script>
+    <script>
+        toogleMenuList();
+
+        initProductCenter();
+        bannerImg();
+        initWOW();
+
+        function initWOW(){
+            new WOW().init();
+        }
+        /***
+         * 响应式菜单按钮开关
+         ***/
+        function toogleMenuList() {
+            $('.header-menu').click(function () {
+                $('.header-menu').toggleClass('active');
+                $('.menu-list').animate({ width: 'toggle' }, 350);
+            });
+        }
+
+
+        function initProductCenter(){
+            $('.container-c').html('');
+            $.each(data.productCenter,function(key,val){
+                console.log(key=="床")
+                $('.container-c').append(`
+                    <div class="module module-${key}" id="module-${key}">
+                        <div class="product-header">
+                            <div class="product-posTips wow fadeInDown">
+                                您的位置：产品 > <a href="#">产品中心</a>
+                            </div>
+                            <ul class="product-cates clearfix wow fadeInUp">
+                                <li class="product-cate fl ${ key == 'bed' ? 'active':''}"><a class="product-hyper" href="#module-bed">床</a></li>
+                                <li class="product-cate fl ${ key == 'sofa' ? 'active':''}"><a class="product-hyper" href="#module-sofa">沙发</a></li>
+                                <li class="product-cate fl ${ key == 'closet' ? 'active':''}"><a class="product-hyper" href="#module-closet">衣柜</a></li>
+                                <li class="product-cate fl ${ key == 'table' ? 'active':''}"><a class="product-hyper" href="#module-table">桌椅</a></li>
+                                <li class="product-cate fl ${ key == 'light' ? 'active':''}"><a class="product-hyper" href="#module-light">灯</a></li>
+                            </ul>
+                        </div>
+
+                        <ul class="cate-products">
+                            
+                        </ul>
+                    </div>
+                `);
+                $.each(val,function(index,val){
+                    $(`.module-${key} .cate-products`).append(`
+                        <li class="cate-product fl wow bounceInUp">
+                                <a class="cate-product-hyper" href="#">
+                                    <p class="product-id">${val.id}</p>
+                                    <div class="product-desc-hover">
+                                        <p class="name">${val.name}</p>
+                                        <div class="txt">${val.desc}</div>
+                                    </div>
+                                    <img class="product-img" src="../../${val.img}" alt="">
+                                    <div class="product-cover"></div>
+                                    <div class="product-desc">
+                                        <p class="name">${val.name}</p>
+                                        <div class="txt">${val.desc}</div>
+                                    </div>
+                                </a>
+                            </li>
+                    
+                    `)
+                })
+            })
+            
+
+        }
+
+        function bannerImg(){
+        window.onresize = function(){
+            // if(window.innerWidth>1200){
+            //     var lengthMore = $('.slide-img').width()-window.innerWidth;
+                
+            //     $('.slide-img').css('marginLeft',(lengthMore/2*-1));
+            // }
+            if(window.innerWidth<769){
+                var lengthMore = $('.banner img').width()-window.innerWidth;
+                console.log($('.banner img').width(),window.innerWidth);
+                $('.banner img').css('marginLeft',(lengthMore/2*-1));
+
+            }
+        };
+        }
+    </script>
+</body>
+
+</html>

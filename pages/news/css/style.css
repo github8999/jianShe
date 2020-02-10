@@ -1,0 +1,70 @@
+@charset "UTF-8";
+#decoration.news {
+  width: 100%;
+  padding-top: 100px;
+  /***
+  * 头部
+  ***/ }
+  #decoration.news .header,
+  #decoration.news .header-btsp {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #fff; }
+  #decoration.news .header {
+    height: 100px; }
+  #decoration.news .header-btsp {
+    display: none;
+    height: 52px; }
+  #decoration.news .container {
+    width: 100%; }
+    #decoration.news .container .container-c {
+      width: 1200px;
+      margin: 0 auto; }
+      #decoration.news .container .container-c .product-header {
+        overflow: hidden;
+        position: relative;
+        color: #767676;
+        width: 1200px;
+        height: 94px;
+        padding-top: 50px; }
+        #decoration.news .container .container-c .product-header .product-posTips {
+          font: 14px/1 'Microsoft yahei'; }
+          #decoration.news .container .container-c .product-header .product-posTips > a {
+            color: #668aca; }
+      #decoration.news .container .container-c .module.module-news {
+        position: relative;
+        margin-bottom: 280px; }
+        #decoration.news .container .container-c .module.module-news .news-list .news-body {
+          width: 490px;
+          margin-bottom: 64px; }
+          #decoration.news .container .container-c .module.module-news .news-list .news-body .news-header {
+            color: #6b6b6b;
+            margin-bottom: 14px;
+            font-size: 18px; }
+            #decoration.news .container .container-c .module.module-news .news-list .news-body .news-header .news-title {
+              line-height: 24px; }
+            #decoration.news .container .container-c .module.module-news .news-list .news-body .news-header .news-date {
+              line-height: 24px;
+              float: right;
+              margin-right: 10px; }
+          #decoration.news .container .container-c .module.module-news .news-list .news-body .news-txt {
+            color: #989898;
+            font-size: 14px;
+            line-height: 26px; }
+        #decoration.news .container .container-c .module.module-news .news-img {
+          width: 600px;
+          height: 400px;
+          position: absolute;
+          left: 0;
+          top: 0;
+          overflow: hidden; }
+          #decoration.news .container .container-c .module.module-news .news-img > img {
+            width: 600px;
+            height: 400px; }
+        #decoration.news .container .container-c .module.module-news .news-img.img-btm {
+          top: 430px; }
+
+/*# sourceMappingURL=style.css.map */

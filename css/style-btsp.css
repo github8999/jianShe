@@ -1,0 +1,183 @@
+@charset "UTF-8";
+@media (max-width: 768px) {
+  #decoration.home {
+    padding-top: 52px;
+    /***
+    * container部分
+    ***/ }
+    #decoration.home .header {
+      display: none; }
+    #decoration.home .header-btsp {
+      display: block; }
+    #decoration.home .banner {
+      width: 100%;
+      height: 200px; }
+      #decoration.home .banner .banner-c {
+        width: 100%; }
+        #decoration.home .banner .banner-c .swiper-container {
+          width: 100%;
+          height: 200px; }
+        #decoration.home .banner .banner-c .swiper-slide .slide-hyper .slide-img {
+          width: 768px;
+          height: 100%; }
+    #decoration.home .container .container-c {
+      width: 100%;
+      /***
+      * 产品中心 
+      ***/
+      /***
+      * 这是服务范围模块
+      ***/
+      /***
+      * 这是新闻咨询范围模块
+      ***/
+      /***
+      * 关于简设
+      ***/ }
+      #decoration.home .container .container-c .module-title {
+        padding-left: 10px;
+        height: 121px; }
+        #decoration.home .container .container-c .module-title .title-cname {
+          margin: 38px 0 6px; }
+        #decoration.home .container .container-c .module-title .title-line-left {
+          top: 91px;
+          left: 10px; }
+        #decoration.home .container .container-c .module-title .title-line-right {
+          display: none; }
+      #decoration.home .container .container-c .module.show-pduct .module-main .module-cate-nav {
+        width: 320px; }
+        #decoration.home .container .container-c .module.show-pduct .module-main .module-cate-nav .module-cate {
+          width: 80px; }
+      #decoration.home .container .container-c .module.show-pduct .module-main .module-items {
+        width: 100%; }
+        #decoration.home .container .container-c .module.show-pduct .module-main .module-items .module-item {
+          float: none;
+          margin: 0 auto;
+          margin-bottom: 20px;
+          width: 100%; }
+          #decoration.home .container .container-c .module.show-pduct .module-main .module-items .module-item:nth-child(1) {
+            margin-left: auto; }
+          #decoration.home .container .container-c .module.show-pduct .module-main .module-items .module-item .cover {
+            width: 100%; }
+          #decoration.home .container .container-c .module.show-pduct .module-main .module-items .module-item .item-title-top,
+          #decoration.home .container .container-c .module.show-pduct .module-main .module-items .module-item .item-title-btm {
+            left: 20px; }
+          #decoration.home .container .container-c .module.show-pduct .module-main .module-items .module-item:hover .item-desc {
+            left: 20px; }
+          #decoration.home .container .container-c .module.show-pduct .module-main .module-items .module-item .item-hyper {
+            right: 20px; }
+      #decoration.home .container .container-c .module.product-center .module-main .cate-nav {
+        height: auto;
+        font-size: 0;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        text-align: center; }
+        #decoration.home .container .container-c .module.product-center .module-main .cate-nav .cate-item {
+          float: none;
+          display: inline-block;
+          height: 114px;
+          margin-left: 0; }
+          #decoration.home .container .container-c .module.product-center .module-main .cate-nav .cate-item:nth-child(1) {
+            margin-left: 0; }
+          #decoration.home .container .container-c .module.product-center .module-main .cate-nav .cate-item:nth-child(5) {
+            margin-right: 0; }
+          #decoration.home .container .container-c .module.product-center .module-main .cate-nav .cate-item:nth-child(n) {
+            width: 147px;
+            margin-bottom: 38px; }
+      #decoration.home .container .container-c .module.product-center .module-main .cate-products .cate-product {
+        float: none;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        width: 300px;
+        height: 300px; }
+        #decoration.home .container .container-c .module.product-center .module-main .cate-products .cate-product:nth-child(3n-1) {
+          margin: 0 auto;
+          margin-bottom: 20px; }
+        #decoration.home .container .container-c .module.product-center .module-main .cate-products .cate-product .product-cover {
+          left: -300px;
+          height: 260px; }
+        #decoration.home .container .container-c .module.product-center .module-main .cate-products .cate-product:hover .product-cover {
+          left: 0;
+          opacity: 1; }
+        #decoration.home .container .container-c .module.product-center .module-main .cate-products .cate-product .product-img {
+          display: block;
+          width: 300px;
+          height: 260px; }
+      #decoration.home .container .container-c .module.service-area {
+        height: auto; }
+        #decoration.home .container .container-c .module.service-area .module-main {
+          position: static;
+          width: 100%;
+          height: auto; }
+          #decoration.home .container .container-c .module.service-area .module-main .module-content {
+            overflow: hidden;
+            width: 100%;
+            height: auto; }
+            #decoration.home .container .container-c .module.service-area .module-main .module-content .module-desc-title {
+              top: 20px;
+              left: 10px; }
+            #decoration.home .container .container-c .module.service-area .module-main .module-content .module-desc {
+              top: 80px;
+              left: 10px; }
+            #decoration.home .container .container-c .module.service-area .module-main .module-content .module-items {
+              position: static;
+              padding-bottom: 20px;
+              margin-top: 150px;
+              border: none;
+              display: flex;
+              flex-wrap: wrap;
+              align-content: flex-start;
+              justify-content: center; }
+              #decoration.home .container .container-c .module.service-area .module-main .module-content .module-items .module-item {
+                border: 1px solid #6d625c;
+                transition: all .4s .15s ease; }
+                #decoration.home .container .container-c .module.service-area .module-main .module-content .module-items .module-item:hover {
+                  z-index: 9; }
+                #decoration.home .container .container-c .module.service-area .module-main .module-content .module-items .module-item:nth-child(1) {
+                  border-left: 1px solid #6d625c; }
+      #decoration.home .container .container-c .module.news-info .module-main .news-left,
+      #decoration.home .container .container-c .module.news-info .module-main .news-right {
+        width: auto;
+        width: 90%;
+        height: auto;
+        float: none;
+        margin: 0 auto; }
+      #decoration.home .container .container-c .module.news-info .module-main .news-left {
+        margin: 0 auto; }
+        #decoration.home .container .container-c .module.news-info .module-main .news-left .item-md {
+          width: 100%;
+          float: none;
+          height: auto; }
+        #decoration.home .container .container-c .module.news-info .module-main .news-left .item-sm {
+          width: 100%;
+          float: none;
+          height: auto; }
+          #decoration.home .container .container-c .module.news-info .module-main .news-left .item-sm:nth-child(2) {
+            margin-right: 0px; }
+        #decoration.home .container .container-c .module.news-info .module-main .news-left .news-item {
+          margin-bottom: 20px; }
+          #decoration.home .container .container-c .module.news-info .module-main .news-left .news-item .news-img {
+            width: 100%;
+            height: auto; }
+      #decoration.home .container .container-c .module.about-us .module-main {
+        margin-bottom: 20px; }
+        #decoration.home .container .container-c .module.about-us .module-main .about-img {
+          float: none;
+          margin: 0 auto;
+          width: 90%;
+          height: auto; }
+          #decoration.home .container .container-c .module.about-us .module-main .about-img img {
+            height: auto; }
+        #decoration.home .container .container-c .module.about-us .module-main .about-desc {
+          float: none;
+          margin-left: 0;
+          width: 100%;
+          height: auto; }
+          #decoration.home .container .container-c .module.about-us .module-main .about-desc .about-text {
+            box-sizing: border-box;
+            padding: 20px; }
+    #decoration.home .footer {
+      width: 100%;
+      height: 251.8px; } }
+
+/*# sourceMappingURL=style-btsp.css.map */

@@ -1,0 +1,51 @@
+@media (max-width: 768px) {
+  #decoration.about {
+    padding-top: 52px; }
+    #decoration.about .header {
+      display: none; }
+    #decoration.about .header-btsp {
+      display: block; }
+    #decoration.about .container {
+      overflow: hidden; }
+      #decoration.about .container .container-c {
+        width: 100%; }
+        #decoration.about .container .container-c .module-title {
+          box-sizing: border-box;
+          padding-left: 10px; }
+        #decoration.about .container .container-c .product-header {
+          width: 300px;
+          padding-left: 10px; }
+        #decoration.about .container .container-c .module.module-team {
+          margin-bottom: 20px; }
+          #decoration.about .container .container-c .module.module-team .team-parters {
+            justify-content: center; }
+            #decoration.about .container .container-c .module.module-team .team-parters .team-parter {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: center; }
+              #decoration.about .container .container-c .module.module-team .team-parters .team-parter .parter-info {
+                width: 80%; }
+        #decoration.about .container .container-c .module.module-mession,
+        #decoration.about .container .container-c .module.module-vision {
+          margin-bottom: 50px; }
+          #decoration.about .container .container-c .module.module-mession .module-content,
+          #decoration.about .container .container-c .module.module-vision .module-content {
+            padding-top: 30px;
+            width: 80%;
+            margin: 0 auto; }
+          #decoration.about .container .container-c .module.module-mession .module-img,
+          #decoration.about .container .container-c .module.module-vision .module-img {
+            float: none;
+            overflow: hidden;
+            width: 80%;
+            margin: 0 auto; }
+            #decoration.about .container .container-c .module.module-mession .module-img img,
+            #decoration.about .container .container-c .module.module-vision .module-img img {
+              width: 100%;
+              height: 100%; }
+        #decoration.about .container .container-c .module.module-vision {
+          margin-bottom: 150px; }
+    #decoration.about .footer {
+      height: 251.8px; } }
+
+/*# sourceMappingURL=style-btsp.css.map */

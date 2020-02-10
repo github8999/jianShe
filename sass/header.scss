@@ -1,0 +1,108 @@
+@charset 'utf-8';
+
+
+// 兼容过渡效果
+@mixin transitionAll($prop,$during,$timing-function){
+    -o-transition: $prop $during $timing-function;
+    -moz-transition: $prop $during $timing-function;
+    -webkit-transition: $prop $during $timing-function;
+    transition: $prop $during $timing-function;
+}
+/***
+* 公用的头部分
+***/
+
+.header{
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(255,255,255,.5);
+    width: 100%;
+    // 高度自适应
+    height: 100px;
+    z-index: 999;
+
+    /***
+    * 版心部分
+    ***/
+    .header-c{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 1200px;
+        height: 100px;
+        margin: 0 auto;
+        
+        // header-logo 部分
+        .header-logo{
+            width: 220px;
+            height: 52px;
+            text-indent: -100px;
+            overflow: hidden;
+        
+            // logo 超连接
+            .logo-hyper{
+                display: block;
+                width: 100%;
+                height: 100%;            
+                background: url(../imgs/header-logo.png) no-repeat center;
+                
+            }
+        }
+
+
+        // site-nav 部分
+        .site-nav{
+            // width: 548px;
+            height: 31px;
+
+            .site-nav-item{
+                float: left;
+                height: 100%;
+                line-height: 30px;
+                // margin: 0 36px;
+                // background-color: blue;
+                
+                &:nth-child(1){
+                    padding-left: 0;
+                }
+                &:nth-last-child(1){
+                    padding-right: 0;
+                }
+                
+                .item-hyper{
+                    display: block;
+                    width: auto;
+                    // padding: 0 4px;
+                    padding: 0 40px;
+                    // border-bottom: 1px solid transparent;
+                    font-size: 14px;
+                    color: #767676;
+                    @include transitionAll(all,.4s,ease);
+
+                    &::after{
+                        content:'';
+                        display:block;
+                        width: 0;
+                        height: 1px;
+                        margin: 0 auto;
+                        background-color: #668aca;
+                        @include transitionAll(all,.4s,ease);
+
+                    }
+                    &:hover{
+                        padding: 0 36px;
+                        color: #668aca;
+                        font-size: 18px;
+                        border-color: #668aca;
+                        &::after{
+                            width: 20px;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+}

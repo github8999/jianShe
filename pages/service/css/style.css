@@ -1,0 +1,76 @@
+@charset "UTF-8";
+#decoration.service {
+  width: 100%;
+  padding-top: 100px;
+  /***
+  * 头部
+  ***/ }
+  #decoration.service .header, #decoration.service .header-btsp {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #fff; }
+  #decoration.service .header {
+    height: 100px; }
+  #decoration.service .header-btsp {
+    display: none;
+    height: 52px; }
+  #decoration.service .container {
+    width: 100%; }
+    #decoration.service .container .container-c {
+      width: 1200px;
+      margin: 0 auto; }
+      #decoration.service .container .container-c .product-header {
+        overflow: hidden;
+        position: relative;
+        color: #767676;
+        width: 1200px;
+        height: 94px;
+        padding-top: 50px; }
+        #decoration.service .container .container-c .product-header .product-posTips {
+          font: 14px/1 'Microsoft yahei'; }
+          #decoration.service .container .container-c .product-header .product-posTips > a {
+            color: #668aca; }
+      #decoration.service .container .container-c .module.module-service {
+        margin-bottom: 450px;
+        position: relative; }
+        #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body {
+          margin-bottom: 20px;
+          display: block;
+          color: #989898; }
+          #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body::after {
+            content: '';
+            display: block;
+            width: 328px;
+            height: 1px;
+            background-color: #f0f0f0; }
+          #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body .service-ctitle {
+            font-size: 18px;
+            line-height: 18px;
+            color: #6b6b6b; }
+          #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body .service-etitle {
+            font-size: 12px;
+            line-height: 24px;
+            margin-bottom: 6px; }
+          #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body .service-txt {
+            width: 380px;
+            font-size: 14px;
+            line-height: 24px;
+            margin-bottom: 15px; }
+        #decoration.service .container .container-c .module.module-service .module-content .service-img {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 750px;
+          height: 400px;
+          overflow: hidden; }
+          #decoration.service .container .container-c .module.module-service .module-content .service-img img {
+            display: block;
+            width: 100%;
+            height: 100%; }
+        #decoration.service .container .container-c .module.module-service .module-content .service-img.img-btm {
+          top: 430px; }
+
+/*# sourceMappingURL=style.css.map */

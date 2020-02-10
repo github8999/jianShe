@@ -1,0 +1,102 @@
+@charset 'utf-8';
+
+@media(max-width:768px) {
+
+    #decoration.about {
+        padding-top: 52px;
+
+        .header {
+            display: none;
+        }
+
+        .header-btsp {
+            display: block;
+        }
+
+        .container {
+            overflow: hidden;
+
+            .container-c {
+                
+                width: 100%;
+
+                .module-title {
+                    box-sizing: border-box;
+                    padding-left: 10px;
+
+
+                }
+
+                .product-header {
+                    width: 300px;
+                    padding-left: 10px;
+                }
+
+                .module.module-team {
+                    margin-bottom: 20px;
+                    .team-parters {
+                        justify-content: center;
+
+
+                        .team-parter {
+                            display: flex;
+                            flex-wrap: wrap;
+                            justify-content: center;
+
+                            .parter-img {
+                                
+                                // float: none;
+                            }
+
+                            .parter-info {
+                                width: 80%;
+                                // float: none;
+                            }
+                        }
+                    }
+
+                }
+
+                //简设使命
+                .module.module-mession,
+                .module.module-vision {
+                    margin-bottom: 50px;
+                    .module-content {
+                        padding-top: 30px;
+                        width: 80%;
+                        margin: 0 auto;
+
+                    }
+
+                    .module-img {
+                        float: none;
+                        overflow: hidden;
+                        width: 80%;
+                        margin: 0 auto;
+                        img{
+                            width: 100%;
+                            height: 100%;
+                            // margin-left: -100px;
+                        }
+                    }
+
+                }
+
+                .module.module-vision {
+                    margin-bottom: 150px;
+                }
+            }
+        }
+
+        // container ->  off
+
+
+
+        // footer
+        .footer {
+            height: 251.8px;
+        }
+    }
+
+
+}

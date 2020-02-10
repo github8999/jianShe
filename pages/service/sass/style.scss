@@ -1,0 +1,115 @@
+@charset 'utf-8';
+
+#decoration.service {
+    width: 100%;
+    padding-top: 100px;
+
+    /***
+    * 头部
+    ***/
+    .header,.header-btsp {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 999;        
+        background-color: #fff;
+    }
+    
+    .header {
+        height: 100px;
+    }
+
+    .header-btsp {
+        display: none;
+        height: 52px;
+    }
+    .container{
+        width: 100%;
+
+        .container-c{
+            width: 1200px;
+            margin: 0 auto;
+
+            .product-header {
+                overflow: hidden;
+                position: relative;
+                color: #767676;
+                width: 1200px;
+                height: 94px;
+                padding-top: 50px;
+
+                .product-posTips {
+                    font: 14px/1 'Microsoft yahei';
+
+                    &>a {
+                        color: #668aca;
+                    }
+                }
+            }
+
+
+            .module.module-service{
+                margin-bottom: 450px;
+                position: relative;
+                .module-content{
+                    .service-list{
+                        .service-body{
+                            margin-bottom: 20px;
+                            display: block;
+                            color: #989898;
+                            // height: 138px;
+                            &::after{
+                                content: '';
+                                display: block;
+                                width: 328px;
+                                height: 1px;
+                                background-color: #f0f0f0;
+                            }
+                            .service-ctitle{
+                                font-size: 18px;
+                                line-height: 18px;
+                                color: #6b6b6b;
+
+                            }
+                            .service-etitle{
+                                font-size: 12px;
+                                line-height: 24px;
+                                margin-bottom: 6px;
+                            }
+                            .service-txt{
+                                width: 380px;
+                                font-size: 14px;
+                                line-height: 24px;
+                                margin-bottom: 15px;
+                            }
+
+
+                        }
+
+                    }
+
+                    .service-img{
+                        position: absolute;
+                        right: 0;
+                        top: 0;
+                        width: 750px;
+                        height: 400px;
+                        overflow: hidden;
+                        img{
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                    .service-img.img-btm{
+                        top: 430px;
+                    }
+                }
+            }
+
+        }
+    }
+
+
+}

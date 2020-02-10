@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简设装饰-服务</title>
+
+    <link rel="stylesheet" href="../../css/reset.css"> <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="css/style.css"> <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="css/style-btsp.css"> <!-- 引入响应式页面样式 -->
+    <link rel="stylesheet" href="../../css/header-bstp.css"> <!-- 引入响应式头部样式 -->
+    <link rel="stylesheet" href="../../lib/animate/animate.min.css">
+
+</head>
+
+<body>
+
+    <div id="decoration" class="service">
+
+        <!-- 引入头部 -->
+        <script src="../../js/header.js"></script>
+        <script src="../../js/header_btsp.js"></script>
+
+        <div class="container">
+            <div class="container-c">
+                <div class="product-header wow bounceInLeft"  data-wow-delay=".15s">
+                    <div class="product-posTips">
+                        您的位置：服务 > <a href="#">服务范围</a>
+                    </div>
+                </div>
+                <!-- 服务范围 -->
+                <div class="module module-service">
+                    <div class="module-content">
+                        <div class="service-list wow fadeInLeft">
+                            <a class="service-body" href="#">
+                                <div class="service-ctitle">翻新改造</div>
+                                <div class="service-etitle">Renovate remould</div>
+                                <div class="service-txt">墙面涂装体系从底层到面层，层层细致处理，哪怕是细节控，
+                                    都无可挑剔！所谓的细节控，注重的不只是刷新完成后的结
+                                    果，对于施工中的每一个工序，都有着自己的高要求！
+                                </div>
+                            </a>
+                            <a class="service-body" href="#">
+                                <div class="service-ctitle">翻新改造</div>
+                                <div class="service-etitle">Renovate remould</div>
+                                <div class="service-txt">墙面涂装体系从底层到面层，层层细致处理，哪怕是细节控，
+                                    都无可挑剔！所谓的细节控，注重的不只是刷新完成后的结
+                                    果，对于施工中的每一个工序，都有着自己的高要求！
+                                </div>
+                            </a>
+                            
+                            <a class="service-body" href="#">
+                                <div class="service-ctitle">翻新改造</div>
+                                <div class="service-etitle">Renovate remould</div>
+                                <div class="service-txt">墙面涂装体系从底层到面层，层层细致处理，哪怕是细节控，
+                                    都无可挑剔！所谓的细节控，注重的不只是刷新完成后的结
+                                    果，对于施工中的每一个工序，都有着自己的高要求！
+                                </div>
+                            </a>
+
+                            <a class="service-body" href="#">
+                                <div class="service-ctitle">翻新改造</div>
+                                <div class="service-etitle">Renovate remould</div>
+                                <div class="service-txt">墙面涂装体系从底层到面层，层层细致处理，哪怕是细节控，
+                                    都无可挑剔！所谓的细节控，注重的不只是刷新完成后的结
+                                    果，对于施工中的每一个工序，都有着自己的高要求！
+                                </div>
+                            </a>
+                        </div>
+
+                        <div class="service-img img-top wow fadeIn"><img src="imgs/service-img1.jpg" alt=""></div>
+                        <div class="service-img img-btm wow fadeIn"><img src="imgs/service-img2.jpg" alt=""></div>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- 引入页脚 -->
+        <script src="../../js/footer.js"></script>
+
+    </div>
+    <!-- 引入jquery -->
+    <script src="../../lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../lib/WOW/wow.min.js"></script>
+    <script>
+        toogleMenuList();
+        initWOW();
+
+        function initWOW(){
+            new WOW().init();
+        }
+        /***
+         * 响应式菜单按钮开关
+         ***/
+        function toogleMenuList() {
+            $('.header-menu').click(function () {
+                $('.header-menu').toggleClass('active');
+                $('.menu-list').animate({ width: 'toggle' }, 350);
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>

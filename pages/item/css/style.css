@@ -1,0 +1,203 @@
+@charset "UTF-8";
+html {
+  min-width: 320px; }
+
+#decoration.item {
+  width: 100%;
+  padding-top: 100px;
+  /***
+  * 头部
+  ***/
+  /***
+  * banner部分
+  ***/ }
+  #decoration.item .header,
+  #decoration.item .header-btsp {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #fff; }
+  #decoration.item .header {
+    height: 100px; }
+  #decoration.item .header-btsp {
+    display: none;
+    height: 52px; }
+  #decoration.item .banner {
+    width: 100%; }
+    #decoration.item .banner .banner-c {
+      width: 1200px;
+      margin: 0 auto; }
+      #decoration.item .banner .banner-c .banner-hyper {
+        display: block;
+        height: 300px;
+        overflow: hidden; }
+        #decoration.item .banner .banner-c .banner-hyper .banner-img {
+          display: block;
+          width: 1200px;
+          height: 600px;
+          margin-top: -55px; }
+  #decoration.item .container {
+    width: 100%; }
+    #decoration.item .container .container-c {
+      width: 1200px;
+      margin: 0 auto;
+      /***
+      * 项目展示: 
+      ***/ }
+      #decoration.item .container .container-c .module .product-header {
+        overflow: hidden;
+        position: relative;
+        color: #767676;
+        width: 1200px;
+        height: 94px;
+        padding-top: 50px; }
+        #decoration.item .container .container-c .module .product-header .product-posTips {
+          font: 14px/1 'Microsoft yahei'; }
+          #decoration.item .container .container-c .module .product-header .product-posTips > a {
+            color: #668aca; }
+        #decoration.item .container .container-c .module .product-header .product-cates {
+          position: absolute;
+          height: 23px;
+          top: 46px;
+          right: -20px; }
+          #decoration.item .container .container-c .module .product-header .product-cates .product-cate {
+            position: relative;
+            width: 99px;
+            height: 23px;
+            box-sizing: border-box;
+            text-align: center;
+            font: 14px/22px 'microsoft yahei';
+            transition: all .4s .15s ease; }
+            #decoration.item .container .container-c .module .product-header .product-cates .product-cate:hover, #decoration.item .container .container-c .module .product-header .product-cates .product-cate.active {
+              font-size: 16px; }
+              #decoration.item .container .container-c .module .product-header .product-cates .product-cate:hover .product-hyper, #decoration.item .container .container-c .module .product-header .product-cates .product-cate.active .product-hyper {
+                color: #668aca; }
+              #decoration.item .container .container-c .module .product-header .product-cates .product-cate:hover::after, #decoration.item .container .container-c .module .product-header .product-cates .product-cate.active::after {
+                width: 12px; }
+            #decoration.item .container .container-c .module .product-header .product-cates .product-cate .product-hyper {
+              display: block;
+              color: #767676; }
+            #decoration.item .container .container-c .module .product-header .product-cates .product-cate:nth-last-child(-n+3) ::before {
+              content: '';
+              position: absolute;
+              left: 0;
+              top: 50%;
+              margin-top: -4px;
+              width: 1px;
+              height: 8px;
+              background-color: #b5b5b5; }
+            #decoration.item .container .container-c .module .product-header .product-cates .product-cate::after {
+              content: '';
+              transition: all .4s .15s ease;
+              display: block;
+              margin: 0 auto;
+              width: 0px;
+              height: 1px;
+              background-color: #668aca; }
+      #decoration.item .container .container-c .module-items .module-item {
+        overflow: hidden;
+        position: relative;
+        color: #fff;
+        width: 360px;
+        height: 270px;
+        margin-left: 60px;
+        border-radius: 6px;
+        -webkit-border-radius: 6px;
+        -o-border-radius: 6px;
+        -moz-border-radius: 6px;
+        -o-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        transition: all .3s .15s ease; }
+        #decoration.item .container .container-c .module-items .module-item .product-img {
+          transition: all .4s .15s ease;
+          margin-top: -120px;
+          height: 272px;
+          width: 100%; }
+        #decoration.item .container .container-c .module-items .module-item:hover .product-img {
+          margin-top: 0; }
+        #decoration.item .container .container-c .module-items .module-item:nth-child(3n+1) {
+          margin-left: 0; }
+        #decoration.item .container .container-c .module-items .module-item .cover,
+        #decoration.item .container .container-c .module-items .module-item .item-title-top,
+        #decoration.item .container .container-c .module-items .module-item .item-title-btm,
+        #decoration.item .container .container-c .module-items .module-item .item-desc,
+        #decoration.item .container .container-c .module-items .module-item .item-hyper {
+          position: absolute;
+          transition: all .3s .15s ease; }
+        #decoration.item .container .container-c .module-items .module-item .cover {
+          border-radius: 6px;
+          -webkit-border-radius: 6px;
+          -o-border-radius: 6px;
+          -moz-border-radius: 6px;
+          opacity: 0;
+          top: 50%;
+          left: 0;
+          width: 360px;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.5); }
+        #decoration.item .container .container-c .module-items .module-item:hover .cover {
+          opacity: 1;
+          top: 0;
+          height: 272px; }
+        #decoration.item .container .container-c .module-items .module-item .item-title-top {
+          left: 50px;
+          top: -55px;
+          opacity: 0; }
+        #decoration.item .container .container-c .module-items .module-item:hover .item-title-top {
+          top: 55px;
+          opacity: 1; }
+        #decoration.item .container .container-c .module-items .module-item .item-title-btm {
+          top: 205px;
+          left: 50px;
+          width: 260px;
+          color: #767676; }
+        #decoration.item .container .container-c .module-items .module-item .item-title-top .btitle,
+        #decoration.item .container .container-c .module-items .module-item .item-title-btm .btitle {
+          font-size: 16px;
+          line-height: 16px;
+          margin-bottom: 8px; }
+        #decoration.item .container .container-c .module-items .module-item .item-title-top .stitle,
+        #decoration.item .container .container-c .module-items .module-item .item-title-btm .stitle {
+          font-size: 12px;
+          line-height: 12px; }
+        #decoration.item .container .container-c .module-items .module-item:hover .item-title-btm {
+          opacity: 0; }
+        #decoration.item .container .container-c .module-items .module-item .item-desc {
+          top: 108px;
+          left: -260px;
+          width: 260px;
+          opacity: 0;
+          line-height: 20px;
+          font-size: 12px; }
+        #decoration.item .container .container-c .module-items .module-item:hover .item-desc {
+          left: 50px;
+          opacity: 1; }
+        #decoration.item .container .container-c .module-items .module-item .item-hyper {
+          top: 208px;
+          right: 50px;
+          display: block;
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          -webkit-border-radius: 50%;
+          -o-border-radius: 50%;
+          -moz-border-radius: 50%;
+          border: 1px solid #e4e4e4;
+          background: #fff url(../../../imgs/jt.png) no-repeat center;
+          transform: rotateZ(0); }
+        #decoration.item .container .container-c .module-items .module-item:hover .item-hyper {
+          top: 180px;
+          -moz-box-shadow: 2px 2px 10px -5px #000;
+          /*firefox*/
+          -webkit-box-shadow: 2px 2px 10px -5px #000;
+          /*webkit*/
+          box-shadow: 2px 2px 10px -5px #000;
+          /*opera或ie9*/
+          border-color: transparent;
+          transform: rotateZ(360deg); }
+
+/*# sourceMappingURL=style.css.map */

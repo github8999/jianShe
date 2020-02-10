@@ -1,0 +1,167 @@
+@charset 'utf-8';
+
+// 兼容过渡效果
+@mixin transitionAll($prop, $during, $timing-function) {
+    -o-transition: $prop $during $timing-function;
+    -moz-transition: $prop $during $timing-function;
+    -webkit-transition: $prop $during $timing-function;
+    transition: $prop $during $timing-function;
+}
+
+// 阴影兼容
+@mixin box_shadow($x, $y, $r1, $r2, $color) {
+    -moz-box-shadow: $x $y $r1 $r2 $color;
+    /*firefox*/
+    -webkit-box-shadow: $x $y $r1 $r2 $color;
+    /*webkit*/
+    box-shadow: $x $y $r1 $r2 $color;
+    /*opera或ie9*/
+}
+
+
+.header-btsp {
+
+    max-width: 768px;
+    width: 100%;
+
+    .header-logo {
+        width: 220px;
+        height: 52px;
+        background: url(../imgs/header-logo.png) no-repeat 10px;
+        background-size: 70%;
+    }
+
+    .header-menu {
+        position: absolute;
+        width: 52px;
+        height: 52px;
+        right: 10px;
+        top: 0;
+        z-index: 99;
+
+        .menu-btn {
+            margin-top: 8px;
+            display: block;
+            @include box_shadow(-1px, 1px, 10px, -5px, #000);
+
+            .menu-line {
+                @include transitionAll(all, .4s, ease);
+                display: block;
+                margin: 8px auto;
+                width: 28px;
+                height: 1px;
+                background-color: #668aca;
+            }
+
+            .menu-top,
+            .menu-btm {
+                height: 1.5px;
+                // transform-origin: left;
+            }
+
+
+        }
+
+        &.active {
+
+            .menu-mid {
+                opacity: 0;
+            }
+
+            .menu-top {
+
+                transform: translateY(9px) rotateZ(-45deg);
+            }
+
+            .menu-btm {
+                transform: translateY(-9px) rotateZ(45deg);
+            }
+        }
+    }
+
+    // 菜单列表
+
+    .menu-list {
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, .5);
+        height: 100%;
+        display: none;
+        text-indent: 50px;
+        text-align: left;
+        @include box_shadow(1px, 1px, 10px, 0, rgba(0, 0, 0, .3));
+
+        .menu-list-cover {
+            width: 280px;
+            height: 100%;
+            background-color: #fff;
+            position: absolute;
+            right: 0;
+            top: 0;
+            padding-top: 52px;
+
+            .menu-item {
+                font: 14px/35px 'microsoft yahei';
+                cursor: pointer;
+                box-sizing: border-box;
+                margin-top: 20px;
+
+
+                &:hover,
+                &.active {
+                    @include box_shadow(1px, 1px, 10px, -5px, #668aca);
+                }
+
+                .menu-hyper {
+                    border-bottom: 1px solid rgba(0, 0, 0, .1);
+                    position: relative;
+                    height: 100%;
+                    color: #767676;
+
+                    &::after,
+                    &::before {
+                        content: '';
+                        position: absolute;
+                        width: 10px;
+                        height: 1px;
+                        top: 50%;
+                        right: -26px;
+                        opacity: 0;
+                        background-color: #668aca;
+                        transition: opacity 2s ease;
+                        transition: transform .4s .1s ease;
+                        transform: translateX(100px);
+                    }
+
+                    &::before {
+                        right: auto;
+                        left: -26px;
+                        transform: translateX(-100px);
+                    }
+
+                }
+
+                &:hover,
+                &.active {
+
+                    .menu-hyper::after,
+                    .menu-hyper::before {
+                        opacity: 1;
+                        transform: translateX(0);
+                    }
+                }
+
+                &:hover,
+                &.active {
+                    .menu-hyper {
+                        color: #668aca;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

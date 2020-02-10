@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>简设装饰-新闻</title>
+
+    <link rel="stylesheet" href="../../css/reset.css"> <!-- 引入重置样式 -->
+    <link rel="stylesheet" href="css/style.css"> <!-- 引入页面样式 -->
+    <link rel="stylesheet" href="../../css/header.css">
+    <link rel="stylesheet" href="../../css/footer.css">
+    <link rel="stylesheet" href="css/style-btsp.css"> <!-- 引入响应式页面样式 -->
+    <link rel="stylesheet" href="../../css/header-bstp.css"> <!-- 引入响应式头部样式 -->
+    <link rel="stylesheet" href="../../lib/animate/animate.min.css">
+
+</head>
+
+<body>
+
+    <div id="decoration" class="news">
+
+        <!-- 引入头部 -->
+        <script src="../../js/header.js"></script>
+        <script src="../../js/header_btsp.js"></script>
+
+
+        <div class="container">
+            <div class="container-c">
+                <div class="product-header wow fadeInLeft">
+                    <div class="product-posTips">
+                        您的位置：新闻 > <a href="#">新闻咨询</a>
+                    </div>
+                </div>
+                <!-- 模块 -->
+                <div class="module module-news clearfix">
+                    <a class="news-list fr wow fadeIn" href="# ">
+                        <div class="news-body">
+                            <p class="news-header">
+                                <span class="news-title">看的到的品质,看不到的用心!</span>
+                                <span class="news-date">06-11</span>
+                            </p>
+                            
+                            <p class="news-txt">专注品质，从现代生活崇尚简约大气的角度出发，家具不仅仅是一件家具这么简
+                                单，更是一件工艺品的象征。</p>
+                        </div>
+                                                
+                        <div class="news-body">
+                            <p class="news-header">
+                                <span class="news-title">看的到的品质,看不到的用心!</span>
+                                <span class="news-date">06-11</span>
+                            </p>
+                            
+                            <p class="news-txt">专注品质，从现代生活崇尚简约大气的角度出发，家具不仅仅是一件家具这么简
+                                单，更是一件工艺品的象征。</p>
+                        </div>
+                        <div class="news-body">
+                            <p class="news-header">
+                                <span class="news-title">看的到的品质,看不到的用心!</span>
+                                <span class="news-date">06-11</span>
+                            </p>
+                            
+                            <p class="news-txt">专注品质，从现代生活崇尚简约大气的角度出发，家具不仅仅是一件家具这么简
+                                单，更是一件工艺品的象征。</p>
+                        </div>
+                        <div class="news-body">
+                            <p class="news-header">
+                                <span class="news-title">看的到的品质,看不到的用心!</span>
+                                <span class="news-date">06-11</span>
+                            </p>
+                            
+                            <p class="news-txt">专注品质，从现代生活崇尚简约大气的角度出发，家具不仅仅是一件家具这么简
+                                单，更是一件工艺品的象征。</p>
+                        </div>
+                        <div class="news-body">
+                            <p class="news-header">
+                                <span class="news-title">看的到的品质,看不到的用心!</span>
+                                <span class="news-date">06-11</span>
+                            </p>
+                            
+                            <p class="news-txt">专注品质，从现代生活崇尚简约大气的角度出发，家具不仅仅是一件家具这么简
+                                单，更是一件工艺品的象征。</p>
+                        </div>
+
+
+                    </a>
+                    <div class="news-img img-top wow fadeIn">
+                        <img src="imgs/img-top.jpg" alt="">
+                    </div>
+                    <div class="news-img img-btm wow fadeIn">
+                        <img src="imgs/img-btm.jpg" alt="">
+                    </div>
+
+                </div>
+
+
+
+            </div>
+        </div>
+
+
+
+
+
+        <!-- 引入页脚 -->
+        <script src="../../js/footer.js"></script>
+
+    </div>
+    <!-- 引入jquery -->
+    <script src="../../lib/jquery/jquery-1.11.3.min.js"></script>
+    <script src="../../lib/WOW/wow.min.js"></script>
+    <script>
+        toogleMenuList();
+        initWOW();
+
+        function initWOW(){
+            new WOW().init();
+        }
+
+        /***
+         * 响应式菜单按钮开关
+         ***/
+        function toogleMenuList() {
+            $('.header-menu').click(function () {
+                $('.header-menu').toggleClass('active');
+                $('.menu-list').animate({ width: 'toggle' }, 350);
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>

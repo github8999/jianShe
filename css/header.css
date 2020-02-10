@@ -1,0 +1,72 @@
+@charset "UTF-8";
+/***
+* 公用的头部分
+***/
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 100%;
+  height: 100px;
+  z-index: 999;
+  /***
+  * 版心部分
+  ***/ }
+  .header .header-c {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1200px;
+    height: 100px;
+    margin: 0 auto; }
+    .header .header-c .header-logo {
+      width: 220px;
+      height: 52px;
+      text-indent: -100px;
+      overflow: hidden; }
+      .header .header-c .header-logo .logo-hyper {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: url(../imgs/header-logo.png) no-repeat center; }
+    .header .header-c .site-nav {
+      height: 31px; }
+      .header .header-c .site-nav .site-nav-item {
+        float: left;
+        height: 100%;
+        line-height: 30px; }
+        .header .header-c .site-nav .site-nav-item:nth-child(1) {
+          padding-left: 0; }
+        .header .header-c .site-nav .site-nav-item:nth-last-child(1) {
+          padding-right: 0; }
+        .header .header-c .site-nav .site-nav-item .item-hyper {
+          display: block;
+          width: auto;
+          padding: 0 40px;
+          font-size: 14px;
+          color: #767676;
+          -o-transition: all 0.4s ease;
+          -moz-transition: all 0.4s ease;
+          -webkit-transition: all 0.4s ease;
+          transition: all 0.4s ease; }
+          .header .header-c .site-nav .site-nav-item .item-hyper::after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 1px;
+            margin: 0 auto;
+            background-color: #668aca;
+            -o-transition: all 0.4s ease;
+            -moz-transition: all 0.4s ease;
+            -webkit-transition: all 0.4s ease;
+            transition: all 0.4s ease; }
+          .header .header-c .site-nav .site-nav-item .item-hyper:hover {
+            padding: 0 36px;
+            color: #668aca;
+            font-size: 18px;
+            border-color: #668aca; }
+            .header .header-c .site-nav .site-nav-item .item-hyper:hover::after {
+              width: 20px; }
+
+/*# sourceMappingURL=header.css.map */

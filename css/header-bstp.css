@@ -1,0 +1,110 @@
+@charset "UTF-8";
+.header-btsp {
+  max-width: 768px;
+  width: 100%; }
+  .header-btsp .header-logo {
+    width: 220px;
+    height: 52px;
+    background: url(../imgs/header-logo.png) no-repeat 10px;
+    background-size: 70%; }
+  .header-btsp .header-menu {
+    position: absolute;
+    width: 52px;
+    height: 52px;
+    right: 10px;
+    top: 0;
+    z-index: 99; }
+    .header-btsp .header-menu .menu-btn {
+      margin-top: 8px;
+      display: block;
+      -moz-box-shadow: -1px 1px 10px -5px #000;
+      /*firefox*/
+      -webkit-box-shadow: -1px 1px 10px -5px #000;
+      /*webkit*/
+      box-shadow: -1px 1px 10px -5px #000;
+      /*opera或ie9*/ }
+      .header-btsp .header-menu .menu-btn .menu-line {
+        -o-transition: all 0.4s ease;
+        -moz-transition: all 0.4s ease;
+        -webkit-transition: all 0.4s ease;
+        transition: all 0.4s ease;
+        display: block;
+        margin: 8px auto;
+        width: 28px;
+        height: 1px;
+        background-color: #668aca; }
+      .header-btsp .header-menu .menu-btn .menu-top,
+      .header-btsp .header-menu .menu-btn .menu-btm {
+        height: 1.5px; }
+    .header-btsp .header-menu.active .menu-mid {
+      opacity: 0; }
+    .header-btsp .header-menu.active .menu-top {
+      transform: translateY(9px) rotateZ(-45deg); }
+    .header-btsp .header-menu.active .menu-btm {
+      transform: translateY(-9px) rotateZ(45deg); }
+  .header-btsp .menu-list {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 100%;
+    display: none;
+    text-indent: 50px;
+    text-align: left;
+    -moz-box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    /*firefox*/
+    -webkit-box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    /*webkit*/
+    box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.3);
+    /*opera或ie9*/ }
+    .header-btsp .menu-list .menu-list-cover {
+      width: 280px;
+      height: 100%;
+      background-color: #fff;
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding-top: 52px; }
+      .header-btsp .menu-list .menu-list-cover .menu-item {
+        font: 14px/35px 'microsoft yahei';
+        cursor: pointer;
+        box-sizing: border-box;
+        margin-top: 20px; }
+        .header-btsp .menu-list .menu-list-cover .menu-item:hover, .header-btsp .menu-list .menu-list-cover .menu-item.active {
+          -moz-box-shadow: 1px 1px 10px -5px #668aca;
+          /*firefox*/
+          -webkit-box-shadow: 1px 1px 10px -5px #668aca;
+          /*webkit*/
+          box-shadow: 1px 1px 10px -5px #668aca;
+          /*opera或ie9*/ }
+        .header-btsp .menu-list .menu-list-cover .menu-item .menu-hyper {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+          position: relative;
+          height: 100%;
+          color: #767676; }
+          .header-btsp .menu-list .menu-list-cover .menu-item .menu-hyper::after, .header-btsp .menu-list .menu-list-cover .menu-item .menu-hyper::before {
+            content: '';
+            position: absolute;
+            width: 10px;
+            height: 1px;
+            top: 50%;
+            right: -26px;
+            opacity: 0;
+            background-color: #668aca;
+            transition: opacity 2s ease;
+            transition: transform .4s .1s ease;
+            transform: translateX(100px); }
+          .header-btsp .menu-list .menu-list-cover .menu-item .menu-hyper::before {
+            right: auto;
+            left: -26px;
+            transform: translateX(-100px); }
+        .header-btsp .menu-list .menu-list-cover .menu-item:hover .menu-hyper::after,
+        .header-btsp .menu-list .menu-list-cover .menu-item:hover .menu-hyper::before, .header-btsp .menu-list .menu-list-cover .menu-item.active .menu-hyper::after,
+        .header-btsp .menu-list .menu-list-cover .menu-item.active .menu-hyper::before {
+          opacity: 1;
+          transform: translateX(0); }
+        .header-btsp .menu-list .menu-list-cover .menu-item:hover .menu-hyper, .header-btsp .menu-list .menu-list-cover .menu-item.active .menu-hyper {
+          color: #668aca; }
+
+/*# sourceMappingURL=header-bstp.css.map */

@@ -1,0 +1,920 @@
+@charset 'utf-8';
+
+// 兼容过渡效果
+@mixin transitionAll($prop, $during, $timing-function) {
+    -o-transition: $prop $during $timing-function;
+    -moz-transition: $prop $during $timing-function;
+    -webkit-transition: $prop $during $timing-function;
+    transition: $prop $during $timing-function;
+}
+
+// border-radius 兼容
+@mixin b-radius($r) {
+    border-radius: $r;
+    -webkit-border-radius: $r;
+    -o-border-radius: $r;
+    -moz-border-radius: $r;
+}
+
+// 阴影兼容
+@mixin box_shadow($x, $y, $r1, $r2, $color) {
+    -moz-box-shadow: $x $y $r1 $r2 $color;
+    /*firefox*/
+    -webkit-box-shadow: $x $y $r1 $r2 $color;
+    /*webkit*/
+    box-shadow: $x $y $r1 $r2 $color;
+    /*opera或ie9*/
+}
+
+
+/***
+* 这是decoration的首页:home的样式
+***/
+#decoration.home {
+    width: 100%;
+    padding-top: 100px;
+
+    /***
+    * 头部
+    ***/
+    .header-btsp {
+        display: none;
+        position: fixed;
+        width: 100%;
+        height: 52px;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        background-color: #fff;
+    }
+
+
+    /***
+    * banner部分
+    ***/
+    .banner {
+        position: relative;
+        width: 1200px;
+        height: 700px;
+
+        @media (min-width: 1200px) {
+            & {
+                width: 100%;
+                left: 0;
+            }
+        }
+
+        /***
+        * banner 版心
+        ***/
+        .banner-c {
+
+            width: 1200px;
+            height: 100%;
+            margin: 0 auto;
+
+
+            /***
+            * swiper样式
+            ***/
+            .swiper-container {
+                overflow: hidden;
+                position: absolute;
+                left: 0;
+                width: 100%;
+                height: 700px;
+            }
+
+            .swiper-slide {
+
+
+                width: 100%;
+                height: 100%;
+                text-align: center;
+                font-size: 18px;
+                background: #e5e5e5;
+
+                /* Center slide text vertically */
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: -webkit-flex;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                -webkit-justify-content: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                -webkit-align-items: center;
+                align-items: center;
+
+
+                /***
+                * swiper中的内容部分
+                ***/
+                .slide-hyper {
+                    overflow: hidden;
+                    display: block;
+                    width: 100%;
+                    height: 100%;
+                    text-align: center;
+                    font-size: 0;
+
+                    // slide中的图片
+                    .slide-img {
+                        height: 100%;
+                    }
+
+                }
+            }
+
+            // --- swiper-slide
+
+            /***
+            * 分液器样式
+            ***/
+            .swiper-pagination-bullet {
+                background-color: #fff;
+                vertical-align: middle;
+                opacity: 1;
+            }
+
+            .swiper-pagination-bullet-active {
+                border: 2px solid #fff;
+                background-color: #668aca;
+            }
+
+
+        }
+
+        // --- banner-c 闭合
+    }
+
+    // --- banner 闭合
+
+
+    /***
+    * container部分
+    ***/
+    .container {
+        width: 100%;
+
+        /***
+        * container版心部分
+        ***/
+        .container-c {
+            width: 1200px;
+            margin: 0 auto;
+
+            /***
+            * 模块公用标题部分, container中的标题都依赖这个样式
+            ***/
+            .module-title {
+                position: relative;
+                width: 100%;
+                height: 231px;
+                box-sizing: border-box;
+                border: 1px solid transparent;
+                padding: 1px;
+
+                .title-cname {
+                    color: #767676;
+                    margin: 118px 0 6px;
+                    font: 30px/1 'Microsoft YaHei';
+
+                }
+
+                .title-ename {
+                    color: #9b9b9b;
+                    font: 12px/1 'Microsoft YaHei';
+
+                }
+
+                .title-line-left,
+                .title-line-right {
+                    position: absolute;
+                    left: 0;
+                    top: 171px;
+                    width: 60px;
+                    height: 1px;
+                    background-color: #a1a1a1;
+                }
+
+                .title-line-right {
+                    left: auto;
+                    right: 0;
+                    width: 300px;
+                }
+            }
+
+            .module.show-pduct {
+
+                /***
+                * 模块主要内容部分
+                ***/
+                .module-main {
+                    width: 100%;
+
+                    // module-cate-nav 模块类别导航
+                    .module-cate-nav {
+                        width: 392px;
+                        height: 27px;
+                        text-align: center;
+                        margin: 0 auto;
+                        margin-bottom: 54px;
+
+                        // module-cate
+                        .module-cate {
+                            position: relative;
+                            width: 98px;
+                            height: 100%;
+
+                            .cate-hyper {
+                                @include transitionAll(all, .4s, ease);
+                                color: #767676;
+                                font: 14px/26px 'Microsoft YaHei';
+                            }
+
+                            &.active .cate-hyper,
+                            &:hover .cate-hyper {
+                                color: #668aca;
+                                font-size: 16px;
+                            }
+
+                            &::after {
+                                @include transitionAll(all, .4s, ease);
+                                content: '';
+                                display: block;
+                                width: 0;
+                                height: 1px;
+                                margin: 0 auto;
+                            }
+
+                            &:nth-child(-n+3) ::before {
+                                content: '';
+                                position: absolute;
+                                right: 0;
+                                width: .5px;
+                                height: 8px;
+                                top: 50%;
+                                margin-top: -4px;
+                                background-color: #a1a1a1;
+                            }
+
+                            &.active::after,
+                            &:hover::after {
+                                background-color: #668aca;
+                                width: 12px;
+                            }
+                        }
+
+
+                    }
+
+                    // module-items
+                    .module-items {
+
+                        .module-item {
+                            overflow: hidden;
+                            position: relative;
+                            color: #fff;
+                            width: 360px;
+                            height: 270px;
+                            margin-left: 60px;
+                            @include b-radius(6px);
+                            @include transitionAll(all, .4s, ease);
+                            transition: all .3s .15s ease;
+                            // background: url(../imgs/XM-1.png) no-repeat top;
+                            // background-size: 100% auto;
+                            .product-img{
+                                transition: all .4s .15s ease;
+                                margin-top: -120px;
+                                height: 272px;
+                                width: 100%;
+                            }
+                            &:hover .product-img{
+                                margin-top: 0;
+                            }
+                            &:nth-child(1) {
+                                margin-left: 0;
+                            }
+
+                            .cover,
+                            .item-title-top,
+                            .item-title-btm,
+                            .item-desc,
+                            .item-hyper {
+                                position: absolute;
+                                transition: all .3s .15s ease;
+                            }
+
+                            .cover {
+                                @include b-radius(6px);
+                                opacity: 0;
+                                top: 50%;
+                                left: 0;
+                                width: 360px;
+                                height: 100%;
+                                background-color: rgba(0, 0, 0, .5);
+                            }
+
+                            &:hover .cover {
+                                opacity: 1;
+                                top: 0;
+                                height: 272px;
+                            }
+
+                            .item-title-top {
+                                left: 50px;
+                                top: -55px;
+                                opacity: 0;
+                            }
+
+                            &:hover .item-title-top {
+                                top: 55px;
+                                opacity: 1;
+                            }
+
+                            .item-title-btm {
+                                top: 205px;
+                                left: 50px;
+                                width: 260px;
+                                color: #767676;
+
+                            }
+
+                            .item-title-top,
+                            .item-title-btm {
+
+                                .btitle {
+                                    font-size: 16px;
+                                    line-height: 16px;
+                                    margin-bottom: 8px;
+                                }
+
+                                .stitle {
+                                    font-size: 12px;
+                                    line-height: 12px;
+                                }
+                            }
+
+                            &:hover .item-title-btm {
+                                opacity: 0;
+                            }
+
+                            .item-desc {
+                                top: 108px;
+                                left: -260px;
+                                width: 260px;
+                                opacity: 0;
+                                line-height: 20px;
+                                font-size: 12px;
+                            }
+
+                            &:hover .item-desc {
+                                left: 50px;
+                                opacity: 1;
+                            }
+
+                            .item-hyper {
+                                top: 208px;
+                                right: 50px;
+                                display: block;
+                                width: 30px;
+                                height: 30px;
+                                @include b-radius(50%);
+                                border: 1px solid #e4e4e4;
+                                background: #fff url(../imgs/jt.png) no-repeat center;
+                                transform: rotateZ(0)
+                            }
+
+                            &:hover .item-hyper {
+                                top: 180px;
+                                @include box_shadow(2px, 2px, 10px, -5px, #000);
+                                border-color: transparent;
+                                transform: rotateZ(360deg)
+                            }
+                        }
+                    }
+
+                    // --- module-items 闭合
+                }
+
+                // ---module-mian 闭合
+            }
+
+            /***
+            * 这是产品中心模块
+            ***/
+            .module.product-center {
+                width: 100%;
+
+                // 模块主要内容部分
+                .module-main {
+                    width: 100%;
+
+                    /***
+                    * 产品中心分类导航 == > cate-nav
+                    ***/
+                    .cate-nav {
+                        width: 100%;
+                        height: 142px;
+                        margin-bottom: 82px;
+                        color: #767676;
+
+                        .cate-item {
+                            cursor: pointer;
+                            @include b-radius(6px);
+                            padding: 0 20px;
+                            height: 114px;
+                            margin-left: 60px;
+                            background-color: #fff;
+                            transition: all .4s .15s ease;
+
+
+                            &.active,
+                            &:hover {
+                                .item-title {
+                                    color: #94adda;
+
+                                    &::after {
+                                        background-color: #668aca;
+                                        width: 18px;
+                                    }
+                                }
+
+                                &:nth-child(1) {
+                                    background: url(../imgs/bed.png) no-repeat center 22px;
+                                    background-color: #94adda;
+                                }
+
+                                &:nth-child(2) {
+                                    background: url(../imgs/sofa-hover.png) no-repeat center 22px;
+                                    background-color: #94adda;
+                                }
+
+                                &:nth-child(3) {
+                                    background: url(../imgs/tables-hover.png) no-repeat center 22px;
+                                    background-color: #94adda;
+                                }
+
+                                &:nth-child(4) {
+                                    background: url(../imgs/closet-hover.png) no-repeat center 22px;
+                                    background-color: #94adda;
+                                }
+
+                                &:nth-child(5) {
+                                    background: url(../imgs/light-hover.png) no-repeat center 22px;
+                                    background-color: #94adda;
+                                }
+                            }
+
+                            .item-title {
+                                margin-top: 114px;
+                                color: #767676;
+                                text-align: center;
+                                font: lighter 14px/27px 'microsoft yahei';
+
+                                &::after {
+                                    @include transitionAll(all, .4s, ease);
+                                    content: '';
+                                    display: block;
+                                    width: 0;
+                                    height: 1px;
+                                    margin: 0 auto;
+                                }
+                            }
+
+                            &:nth-child(1) {
+                                margin-left: 80px;
+                                width: 123px;
+                                background: url(../imgs/bed-default.png) no-repeat center 22px;
+                            }
+
+                            &:nth-child(2) {
+                                width: 124px;
+                                background: url(../imgs/sofa.png) no-repeat center 22px;
+                            }
+
+                            &:nth-child(3) {
+                                width: 146px;
+                                background: url(../imgs/tables.png) no-repeat center 22px;
+                            }
+
+                            &:nth-child(4) {
+                                width: 86px;
+                                background: url(../imgs/closet.png) no-repeat center 22px;
+                            }
+
+                            &:nth-child(5) {
+                                width: 112px;
+                                margin-right: 80px;
+                                background: url(../imgs/light.png) no-repeat center 22px;
+                            }
+                        }
+                    }
+
+                    // ==> cate-nav
+
+                    /***
+                    * 产品列表 == > cate-products 
+                    ***/
+                    .cate-products {
+                        width: 100%;
+                        overflow: hidden;
+
+                        // 产品样式
+                        .cate-product {
+                            overflow: hidden;
+                            position: relative;
+                            width: 360px;
+                            height: 360px;
+                            box-sizing: border-box;
+                            
+                            &:nth-child(3n-1) {
+                                margin: 0 60px;
+                            }
+
+                            .cate-product-hyper{
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                            color: #767676;
+
+                            }
+                            .product-cover {
+                                transition: all .3s .15s ease;
+                                position: absolute;
+                                top: 0;
+                                left: -360px;
+                                width: 100%;
+                                height: 320px;
+                                opacity: 0;
+                                background-color: rgba(0, 0, 0, .5);
+                                border-radius: 6px;
+                            }
+
+                            &:hover {
+                                .product-desc-hover {
+                                    left: 0;
+                                }
+
+                                .product-id {
+                                    left: 82px;
+                                }
+
+                                .product-desc {
+                                    opacity: 0;
+                                }
+
+                                .product-cover {
+                                    left: 0;
+                                    opacity: 1;
+                                }
+                            }
+
+                            .product-id {
+                                color: #fff;
+                                transition: all .3s .15s ease;
+                                position: absolute;
+                                top: 130px;
+                                left: -60px;
+                                font: 30px/1 'microsoft yahei';
+                                z-index: 99;
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    width: 80px;
+                                    height: 1px;
+                                    bottom: 1px;
+                                    left: -82px;
+                                    background-color: #fff;
+                                }
+
+                            }
+
+                            .product-desc-hover {
+                                z-index: 99;
+                                position: absolute;
+                                top: 172px;
+                                left: 290px;
+                                color: #fff;
+                            }
+
+                            .product-img {
+                                display: block;
+                                width: 360px;
+                                height: 320px;
+                            }
+
+
+                            .product-desc,
+                            .product-desc-hover {
+                                transition: all .3s .15s ease;
+                                opacity: 1;
+                                width: 100%;
+                                height: 40px;
+                                text-indent: 70px;
+
+                                .name {
+                                    font-size: 16px;
+                                    line-height: 16px;
+                                    margin-bottom: 10px;
+                                }
+
+                                .txt {
+                                    font-size: 14px;
+                                    line-height: 14px;
+                                }
+                            }
+
+
+                            //--- product-desc闭合
+                        }
+
+                        // --- cate-product闭合
+
+                    }
+
+                    // ==> cate-product 
+                }
+            }
+
+            // ==>  product-center闭
+
+
+            /***
+            * 这是服务范围模块
+            ***/
+            .module.service-area {
+                height: 931px;
+
+                .module-main {
+                    width: 1200px;
+                    position: absolute;
+                    left: 0;
+                    height: 700px;
+                    background: url(../imgs/service-area.jpg) no-repeat center;
+                    background-size: cover;
+
+                    @media (min-width: 1200px) {
+                        & {
+                            width: 100%;
+                        }
+                    }
+
+                    // 模块的内容
+                    .module-content {
+                        position: relative;
+                        width: 1200px;
+                        height: 700px;
+                        margin: 0 auto;
+
+                        .module-desc-title {
+                            position: absolute;
+                            top: 150px;
+                            left: 0;
+                            font: lighter 30px/1 'Microsoft YaHei';
+                            color: #fff;
+                        }
+
+                        .module-desc {
+                            position: absolute;
+                            top: 210px;
+                            left: 0;
+                            width: 350px;
+                            font: lighter 14px/24px 'microsoft yahei';
+                            color: #fff;
+                        }
+
+                        .module-items {
+                            position: absolute;
+                            border: 1px solid #6d625c;
+                            right: 0;
+                            bottom: 149px;
+
+                            .module-item {
+                                cursor: pointer;
+                                position: relative;
+                                width: 248px;
+                                height: 148px;
+                                border-left: 1px solid #6d625c;
+                                color: #fff;
+                                text-align: center;
+
+                                &:nth-child(1){
+                                    z-index: 4;
+                                }
+                                &:nth-child(2){
+                                    z-index: 3;
+                                }
+                                &:nth-child(3){
+                                    z-index: 2;
+                                }
+                                &:nth-child(4){
+                                    z-index: 1;
+                                }
+                                &::after {
+                                    transition: all .3s .15s ease; 
+                                    content: '';
+                                    position: absolute;
+                                    top: -5px;
+                                    left: -8px;
+                                    // margin: auto;
+                                    width: 264px;
+                                    height: 158px;
+                                    z-index: 1;
+                                }
+
+                                &:hover::after {
+                                    background-color: #668aca;
+
+                                }
+
+                                &:nth-child(1) {
+                                    border-left: none;
+                                }
+
+                                &::before {
+                                    content: '';
+                                    position: absolute;
+                                    top: 0;
+                                    bottom: 0;
+                                    left: 0;
+                                    right: 0;
+                                    margin: auto;
+                                    width: 30px;
+                                    height: 1px;
+                                    background-color: #fff;
+                                    z-index: 2;
+                                }
+
+                                .item-cdesc {
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 46px;
+                                    font: 16px/1 'microsoft yahei';
+                                    z-index: 2;
+                                }
+
+                                .item-edesc {
+                                    width: 100%;
+                                    position: absolute;
+                                    top: 88px;
+                                    z-index: 2;
+                                    font: lighter 12px/1 'microsoft yahei';
+                                }
+                            }
+                        }
+
+                    }
+
+                    // ==> module-content
+
+                }
+            }
+
+
+            /***
+            * 这是新闻咨询模块样式
+            ***/
+            .module.news-info {
+
+                .module-main {
+
+                    .news-left,
+                    .news-right {
+                        width: 570px;
+                        height: 570px;
+                    }
+
+                    .news-left {
+                        margin-right: 60px;
+
+                        .item-md {
+                            width: 100%;
+                            height: 270px;
+                            margin-bottom: 30px;
+                        }
+
+                        .item-sm {
+                            width: 270px;
+                            height: 270px;
+
+                            &:nth-child(2) {
+                                margin-right: 30px;
+                            }
+                        }
+
+
+                    }
+
+                    // news-item
+                    .news-item {
+                        position: relative;
+
+                        overflow: hidden;
+
+                        .news-hyper{
+                            color: #fff;
+                        }
+                        .news-img {
+                            width: 100%;
+                            height: 100%;
+                        }
+
+                        &:hover .cover {
+                            opacity: 1;
+                            bottom: 0;
+                        }
+
+                        .cover {
+                            transition: all .3s .15s ease;
+                            opacity: 0;
+                            position: absolute;
+                            bottom: -90px;
+                            left: 0;
+                            width: 100%;
+                            height: 90px;
+                            background-color: rgba(0, 0, 0, .5);
+                            box-sizing: border-box;
+                            padding-left: 9%;
+                            padding-right: 9%;
+
+                            .desc-title {
+                                width: 100%;
+                                font: 16px/38px 'microsoft yahei';
+                                margin-bottom: 3px;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                            }
+
+                            .desc-content {
+                                width: 100%;
+                                height: 40px;
+                                font: 12px/20px 'microsoft yahei';
+                                text-overflow: -o-ellipsis-lastline;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                display: -moz-box;
+                                -webkit-line-clamp: 2;
+                                -moz-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                                -moz-box-orient: vertical;
+                                
+                            }
+                        }
+
+                    }
+
+
+                }
+
+            }
+
+            // ==> news-info 闭合
+
+
+            /***
+            * 这是关于简设模块的样式
+            ***/
+            .module.about-us {
+                .module-main {
+                    margin-bottom: 200px;
+
+                    .about-img {
+                        width: 500px;
+                        height: 300px;
+
+                        img {
+                            display: block;
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+
+                    .about-desc {
+                        margin-left: 30px;
+                        width: 670px;
+                        height: 300px;
+                        color: #767676;
+
+                        .about-text {
+                            font: 14px/25px 'microsoft yahei';
+                            padding-top: 26px;
+                        }
+                    }
+
+                }
+            }
+
+        }
+
+        // container 版心
+    }
+
+    // container
+}

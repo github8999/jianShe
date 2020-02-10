@@ -1,0 +1,33 @@
+@media (max-width: 768px) {
+  #decoration.service {
+    padding-top: 52px; }
+    #decoration.service .header {
+      display: none; }
+    #decoration.service .header-btsp {
+      display: block; }
+    #decoration.service .container .container-c {
+      width: 100%; }
+      #decoration.service .container .container-c .product-header {
+        box-sizing: border-box;
+        padding-left: 10px;
+        width: 300px; }
+      #decoration.service .container .container-c .module.module-service {
+        margin-bottom: 150px;
+        width: 100%; }
+        #decoration.service .container .container-c .module.module-service .module-content {
+          width: 100%; }
+          #decoration.service .container .container-c .module.module-service .module-content .service-list {
+            width: 100%; }
+            #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body {
+              width: 80%;
+              margin: 50px auto; }
+              #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body::after {
+                width: 80%; }
+              #decoration.service .container .container-c .module.module-service .module-content .service-list .service-body .service-txt {
+                width: 100%; }
+      #decoration.service .container .container-c .service-img {
+        display: none; }
+    #decoration.service .footer {
+      height: 251.8px; } }
+
+/*# sourceMappingURL=style-btsp.css.map */

@@ -1,0 +1,315 @@
+@charset 'utf-8';
+
+
+// 兼容过渡效果
+@mixin transitionAll($prop, $during, $timing-function) {
+    -o-transition: $prop $during $timing-function;
+    -moz-transition: $prop $during $timing-function;
+    -webkit-transition: $prop $during $timing-function;
+    transition: $prop $during $timing-function;
+}
+
+// border-radius 兼容
+@mixin b-radius($r) {
+    border-radius: $r;
+    -webkit-border-radius: $r;
+    -o-border-radius: $r;
+    -moz-border-radius: $r;
+}
+
+// 阴影兼容
+@mixin box_shadow($x, $y, $r1, $r2, $color) {
+    -moz-box-shadow: $x $y $r1 $r2 $color;
+    /*firefox*/
+    -webkit-box-shadow: $x $y $r1 $r2 $color;
+    /*webkit*/
+    box-shadow: $x $y $r1 $r2 $color;
+    /*opera或ie9*/
+}
+
+html {
+    min-width: 320px;
+}
+
+#decoration.item {
+    width: 100%;
+    padding-top: 100px;
+
+    /***
+    * 头部
+    ***/
+    .header,
+    .header-btsp {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        background-color: #fff;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .header-btsp {
+        display: none;
+        height: 52px;
+    }
+
+    /***
+    * banner部分
+    ***/
+    .banner {
+        width: 100%;
+
+        .banner-c {
+            width: 1200px;
+            margin: 0 auto;
+
+            .banner-hyper {
+                display: block;
+                height: 300px;
+                overflow: hidden;
+
+                .banner-img {
+                    display: block;
+                    width: 1200px;
+                    height: 600px;
+                    margin-top: -55px;
+                }
+            }
+        }
+    }
+
+    .container {
+        width: 100%;
+
+        .container-c {
+            width: 1200px;
+            margin: 0 auto;
+
+            /***
+            * 项目展示: 
+            ***/
+            .module {
+
+                // 项目展示模块头部
+                .product-header {
+                    overflow: hidden;
+                    position: relative;
+                    color: #767676;
+                    width: 1200px;
+                    height: 94px;
+                    padding-top: 50px;
+
+                    .product-posTips {
+                        font: 14px/1 'Microsoft yahei';
+
+                        &>a {
+                            color: #668aca;
+                        }
+                    }
+
+                    // 头部右侧
+                    .product-cates {
+                        position: absolute;
+                        height: 23px;
+                        top: 46px;
+                        right: -20px;
+                        .product-cate {
+                            position: relative;
+                            width: 99px;
+                            height: 23px;
+                            box-sizing: border-box;
+                            text-align: center;
+                            font: 14px/22px 'microsoft yahei';
+                            transition: all .4s .15s ease;
+
+                            &:hover,
+                            &.active {
+                                // padding-left: 32px;
+                                font-size: 16px;
+
+                                .product-hyper {
+                                    color: #668aca;
+                                }
+
+                                &::after {
+                                    width: 12px;
+                                }
+
+                            }
+
+                            .product-hyper {
+                                display: block;
+                                color: #767676;
+                            }
+
+                            &:nth-last-child(-n+3) {
+                                ::before {
+                                    content: '';
+                                    position: absolute;
+                                    left: 0;
+                                    top: 50%;
+                                    margin-top: -4px;
+                                    width: 1px;
+                                    height: 8px;
+                                    background-color: #b5b5b5;
+                                }
+                            }
+
+                            &::after {
+                                content: '';
+                                transition: all .4s .15s ease;
+                                display: block;
+                                margin: 0 auto;
+                                width: 0px;
+                                height: 1px;
+                                background-color: #668aca;
+
+                            }
+                        }
+                    }
+                }
+
+
+            }
+
+
+
+            // module-items
+            .module-items {
+
+                .module-item {
+                    overflow: hidden;
+                    position: relative;
+                    color: #fff;
+                    width: 360px;
+                    height: 270px;
+                    margin-left: 60px;
+                    @include b-radius(6px);
+                    @include transitionAll(all, .4s, ease);
+                    transition: all .3s .15s ease;
+
+                    // background: url(../imgs/XM-1.png) no-repeat top;
+                    // background-size: 100% auto;
+                    .product-img {
+                        transition: all .4s .15s ease;
+                        margin-top: -120px;
+                        height: 272px;
+                        width: 100%;
+                    }
+
+                    &:hover .product-img {
+                        margin-top: 0;
+                    }
+
+                    &:nth-child(3n+1) {
+                        margin-left: 0;
+                    }
+
+                    .cover,
+                    .item-title-top,
+                    .item-title-btm,
+                    .item-desc,
+                    .item-hyper {
+                        position: absolute;
+                        transition: all .3s .15s ease;
+                    }
+
+                    .cover {
+                        @include b-radius(6px);
+                        opacity: 0;
+                        top: 50%;
+                        left: 0;
+                        width: 360px;
+                        height: 100%;
+                        background-color: rgba(0, 0, 0, .5);
+                    }
+
+                    &:hover .cover {
+                        opacity: 1;
+                        top: 0;
+                        height: 272px;
+                    }
+
+                    .item-title-top {
+                        left: 50px;
+                        top: -55px;
+                        opacity: 0;
+                    }
+
+                    &:hover .item-title-top {
+                        top: 55px;
+                        opacity: 1;
+                    }
+
+                    .item-title-btm {
+                        top: 205px;
+                        left: 50px;
+                        width: 260px;
+                        color: #767676;
+
+                    }
+
+                    .item-title-top,
+                    .item-title-btm {
+
+                        .btitle {
+                            font-size: 16px;
+                            line-height: 16px;
+                            margin-bottom: 8px;
+                        }
+
+                        .stitle {
+                            font-size: 12px;
+                            line-height: 12px;
+                        }
+                    }
+
+                    &:hover .item-title-btm {
+                        opacity: 0;
+                    }
+
+                    .item-desc {
+                        top: 108px;
+                        left: -260px;
+                        width: 260px;
+                        opacity: 0;
+                        line-height: 20px;
+                        font-size: 12px;
+                    }
+
+                    &:hover .item-desc {
+                        left: 50px;
+                        opacity: 1;
+                    }
+
+                    .item-hyper {
+                        top: 208px;
+                        right: 50px;
+                        display: block;
+                        width: 30px;
+                        height: 30px;
+                        @include b-radius(50%);
+                        border: 1px solid #e4e4e4;
+                        background: #fff url(../../../imgs/jt.png) no-repeat center;
+                        transform: rotateZ(0)
+                    }
+
+                    &:hover .item-hyper {
+                        top: 180px;
+                        @include box_shadow(2px, 2px, 10px, -5px, #000);
+                        border-color: transparent;
+                        transform: rotateZ(360deg)
+                    }
+                }
+            }
+
+            //
+        }
+    }
+
+
+}

@@ -1,0 +1,113 @@
+@charset 'utf-8';
+
+/***
+* 公用的页脚部分
+***/
+
+.footer {
+    width: 100%;
+
+    height: 262px;
+    background-color: #f7f7f7;
+    color: #767676;
+    font-size: 14px;
+
+    // 版心
+    .footer-c {
+        background-color: #f7f7f7;
+        display: flex;
+        align-items: center;
+        width: 1200px;
+        height: 100%;
+        margin: 0 auto;
+
+        .footer-item {
+            float: left;
+            width: 400px;
+            height: 74px;
+
+        }
+
+        .footer-left {
+            text-align: center;
+
+            .compony {
+                margin-bottom: 10px;
+            }
+
+            .msgs-hyper {
+                margin: 0 auto;
+                display: flex;
+                justify-content: space-between;
+                width: 113px;
+                height: 25px;
+
+                .msg {
+                    display: block;
+                    width: 25px;
+                    height: 100%;
+                    background: url(../imgs/qq.png) no-repeat center;
+                }
+
+                .weibo {
+                    background: url(../imgs/wb.png) no-repeat center;
+                }
+
+                .wechat {
+                    background: url(../imgs/wx.png) no-repeat center;
+                }
+
+            }
+        }
+
+        .footer-middle,
+        .footer-right {
+            box-sizing: border-box;
+            border-left: 1px solid #e9e9e9;
+            padding-left: 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+    }
+
+    // ---footer-c
+}
+
+// ---footer 
+
+// 响应式页脚
+@media (max-width:768px) {
+    .footer {
+        height: auto;
+        .footer-c {
+            width: 100%;
+            height: auto;
+            flex-direction: column;
+
+            .footer-item {
+                float: left;
+                width: 100%;
+                height: auto;
+            }
+
+            .footer-left {
+                margin-top: 20px;
+            }
+
+            .footer-middle,
+            .footer-right {
+                border:none;
+                text-align: center;
+                box-sizing: border-box;
+                padding-left: 0px;
+                line-height: 30px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+        }
+    }
+}

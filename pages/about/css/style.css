@@ -1,0 +1,109 @@
+@charset "UTF-8";
+#decoration.about {
+  width: 100%;
+  padding-top: 100px;
+  /***
+  * 头部
+  ***/ }
+  #decoration.about .header, #decoration.about .header-btsp {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 999;
+    background-color: #fff; }
+  #decoration.about .header {
+    height: 100px; }
+  #decoration.about .header-btsp {
+    display: none;
+    height: 52px; }
+  #decoration.about .container {
+    width: 100%; }
+    #decoration.about .container .container-c {
+      width: 1200px;
+      margin: 0 auto; }
+      #decoration.about .container .container-c .module-title {
+        height: 70px;
+        color: #767676; }
+        #decoration.about .container .container-c .module-title .ctitle {
+          font: 18px/1 "Microsoft yahei"; }
+        #decoration.about .container .container-c .module-title .etitle {
+          font: 12px/22px "Microsoft yahei"; }
+        #decoration.about .container .container-c .module-title::after {
+          content: '';
+          display: block;
+          width: 30px;
+          height: 1px;
+          background-color: #767676; }
+      #decoration.about .container .container-c .product-header {
+        overflow: hidden;
+        position: relative;
+        color: #767676;
+        width: 1200px;
+        height: 44px;
+        padding-top: 50px; }
+        #decoration.about .container .container-c .product-header .product-posTips {
+          font: 14px/1 "Microsoft yahei"; }
+          #decoration.about .container .container-c .product-header .product-posTips > a {
+            color: #668aca; }
+      #decoration.about .container .container-c .module.module-team {
+        margin-bottom: 70px; }
+        #decoration.about .container .container-c .module.module-team .team-parters {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: space-between; }
+          #decoration.about .container .container-c .module.module-team .team-parters .team-parter {
+            padding-bottom: 30px; }
+            #decoration.about .container .container-c .module.module-team .team-parters .team-parter .parter-img {
+              width: 200px;
+              height: 200px;
+              border-radius: 6px;
+              background-color: gray;
+              overflow: hidden; }
+            #decoration.about .container .container-c .module.module-team .team-parters .team-parter .parter-info {
+              width: 360px;
+              height: 200px;
+              box-sizing: border-box;
+              padding-top: 30px;
+              padding-left: 24px;
+              color: #6b6b6b; }
+              #decoration.about .container .container-c .module.module-team .team-parters .team-parter .parter-info .parter-name {
+                font: lighter 18px/1 "Microsoft yahei";
+                margin-bottom: 9px; }
+              #decoration.about .container .container-c .module.module-team .team-parters .team-parter .parter-info .parter-post {
+                font-size: 14px;
+                line-height: 1em;
+                margin-bottom: 20px; }
+              #decoration.about .container .container-c .module.module-team .team-parters .team-parter .parter-info .parter-desc {
+                font-size: 12px;
+                line-height: 22px;
+                margin-bottom: 15px; }
+              #decoration.about .container .container-c .module.module-team .team-parters .team-parter .parter-info::after {
+                content: '';
+                display: block;
+                width: 60px;
+                height: 1px;
+                background-color: #e2e2e2; }
+      #decoration.about .container .container-c .module.module-mession .module-content {
+        width: 620px;
+        margin-bottom: 35px;
+        color: #989898; }
+        #decoration.about .container .container-c .module.module-mession .module-content .content-txt {
+          font-size: 14px;
+          line-height: 24px;
+          margin-bottom: 10px;
+          text-indent: 2em; }
+      #decoration.about .container .container-c .module.module-mession .module-img {
+        width: 500px;
+        height: 300px;
+        background-color: blue; }
+      #decoration.about .container .container-c .module.module-vision .module-content {
+        width: 620px;
+        margin-bottom: 195px;
+        color: #989898; }
+        #decoration.about .container .container-c .module.module-vision .module-content .content-txt {
+          font-size: 14px;
+          line-height: 24px;
+          text-indent: 2em; }
+
+/*# sourceMappingURL=style.css.map */

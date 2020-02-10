@@ -1,0 +1,114 @@
+@charset 'utf-8';
+
+#decoration.news {
+    width: 100%;
+    padding-top: 100px;
+
+    /***
+    * 头部
+    ***/
+    .header,
+    .header-btsp {
+        position: fixed;
+        width: 100%;
+        left: 0;
+        top: 0;
+        z-index: 999;
+        background-color: #fff;
+    }
+
+    .header {
+        height: 100px;
+    }
+
+    .header-btsp {
+        display: none;
+        height: 52px;
+    }
+
+    .container {
+        width: 100%;
+
+        .container-c {
+            width: 1200px;
+            margin: 0 auto;
+
+            .product-header {
+                overflow: hidden;
+                position: relative;
+                color: #767676;
+                width: 1200px;
+                height: 94px;
+                padding-top: 50px;
+
+                .product-posTips {
+                    font: 14px/1 'Microsoft yahei';
+
+                    &>a {
+                        color: #668aca;
+                    }
+                }
+
+            }
+
+
+            .module.module-news {
+                position: relative;
+                margin-bottom: 280px;
+                .news-list {
+                    .news-body {
+                        width: 490px;
+                        margin-bottom: 64px;
+
+                        .news-header {
+                            color: #6b6b6b;
+                            margin-bottom: 14px;
+                            font-size: 18px;
+
+                            .news-title {
+                                line-height: 24px;
+
+                            }
+
+                            .news-date {
+                                line-height: 24px;
+                                float: right;
+                                margin-right: 10px;
+                            }
+                        }
+
+                        .news-txt {
+                            color: #989898;
+                            font-size: 14px;
+                            line-height: 26px;
+                        }
+                    }
+
+                    
+
+                }
+
+                .news-img{
+                    width: 600px;
+                    height: 400px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    overflow: hidden;
+
+                    &>img{
+                        width: 600px;
+                        height: 400px;
+                    }
+                }
+                .news-img.img-btm{
+                    top: 430px;
+                }
+
+            }
+
+        }
+    }
+
+
+}
